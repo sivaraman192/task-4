@@ -1,0 +1,308 @@
+/* ---------- Colour palette ---------- */
+:root {
+  --navy: #0b1b3a;
+  --navy-light: #14295a;
+  --orange: #ff7a1a;
+  --orange-dark: #e56404;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+/* ---------- Basic reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: #f1f5f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Main header ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(11, 27, 58, 0.1);
+  border-bottom: 3px solid var(--orange);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo svg {
+  width: 54px;
+  height: 54px;
+  display: block;
+}
+
+.logo-name {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* Navigation */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #fff1e6;
+  color: var(--orange-dark);
+}
+
+/* Dropdown under Services (CSS only) */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 210px;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(11, 27, 58, 0.15);
+  padding: 8px;
+}
+
+.dropdown a {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+li:hover > .dropdown {
+  display: block;
+}
+
+/* Register button */
+.btn-register {
+  display: inline-block;
+  background-color: var(--orange);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 30px;
+  box-shadow: 0 6px 14px rgba(255, 122, 26, 0.35);
+}
+
+.btn-register:hover {
+  background-color: var(--orange-dark);
+}
+
+/* ---------- Promotional section ---------- */
+main {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  padding: 90px 20px 110px;
+}
+
+.offer-section {
+  display: flex;
+  justify-content: center;
+}
+
+.offer-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 580px;
+  padding: 52px 46px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.offer-badge {
+  display: inline-block;
+  background-color: #fff1e6;
+  color: var(--orange-dark);
+  border: 1px solid var(--orange);
+  border-radius: 20px;
+  padding: 4px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.offer-card h1 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.offer-card p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 420px;
+  margin: 0 auto 30px;
+}
+
+.btn-offer {
+  display: inline-block;
+  background-color: var(--orange);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 14px 44px;
+  border-radius: 30px;
+  box-shadow: 0 6px 16px rgba(255, 122, 26, 0.4);
+}
+
+.btn-offer:hover {
+  background-color: var(--orange-dark);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--navy);
+  color: #cbd5e1;
+  border-top: 3px solid var(--orange);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo .logo-name {
+  color: #ffffff;
+}
+
+.footer-contact h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footer-contact p {
+  font-size: 15px;
+}
+
+.footer-contact a {
+  color: #cbd5e1;
+}
+
+.footer-contact a:hover {
+  color: var(--orange);
+}
+
+.footer-bottom {
+  border-top: 1px solid #22386b;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 20px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header {
+    position: static;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .dropdown {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 50px 16px 60px;
+  }
+
+  .offer-card {
+    padding: 36px 22px;
+  }
+
+  .offer-card h1 {
+    font-size: 28px;
+  }
+}
